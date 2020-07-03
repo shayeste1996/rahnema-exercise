@@ -1,0 +1,79 @@
+.comment {
+  margin-top: 20px;
+  border-bottom: 1px solid $grey;
+  &__input {
+    border: 1px solid $border-input;
+    background-color: $bg-hover-grey;
+    border-radius: 25px;
+    width: 100%;
+    padding: 7px 10px;
+    margin-right: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__profile--image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__box {
+    background-color: $bg-hover-grey;
+    border-radius: 15px;
+    padding: 8px 15px;
+    margin: 0 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    &--username {
+      text-align: right;
+      color: $dark-blue;
+    }
+    &--text {
+      text-align: left;
+    }
+  }
+  &__reactions {
+    display: block;
+    margin: 8px 15px 0 0;
+    font-size: 0.8rem;
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        color: $dark-blue;
+      cursor: pointer;
+        &:first-child {
+          .divider {
+            display: none;
+          }
+        }
+        &:last-child{
+          color: $black;
+        }
+        .divider{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__footer{
+    padding: 1rem;
+    .show-coments{
+      color: $dark-blue;
+      cursor: pointer;
+
+    }
+    .pages{
+      text-align: left;
+      span{
+          cursor: pointer;
+      }
+    
+    }
+  }
+}

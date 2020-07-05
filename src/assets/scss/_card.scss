@@ -32,23 +32,35 @@
 }
 
 //ant modal
+.create-post-modal {
+  &.center-title {
+    .ant-modal-title {
+      text-align: center;
+    }
+  }
+  .ant-modal-close {
+    right: unset;
+  }
+  .ant-modal-header {
+    border: unset;
+    padding: 8px 12px;
+  }
+  .ant-modal-title {
+    background-color: $bg-grey;
+    border-bottom: 1px solid $light-grey;
+    padding: 7px;
+  }
+  .ant-modal-body {
+    padding: 10px 12px 10px;
+  }
+  .ant-modal-footer {
+    margin: 0px 20px;
+  }
+  .ant-form-item-explain {
+    margin-top: 7px;
+  }
+}
 
-.ant-modal-close {
-  left: 0;
-  right: unset;
-}
-.ant-modal-header {
-  border: unset;
-  padding: 8px 12px;
-}
-.ant-modal-title {
-  background-color: $bg-grey;
-  border-bottom: 1px solid $light-grey;
-  padding: 7px;
-}
-.ant-modal-body {
-  padding: 0px 12px 10px;
-}
 .smile-icon {
   font-size: 3rem;
   color: #787878;
@@ -57,26 +69,28 @@
   resize: none;
   border: none;
   width: 100%;
-  height: 200px;
+  height: 170px;
   padding: 2px;
-  font-size: 20px;
+  margin-top: 8px;
+  font-size: 16px;
   &:focus {
     outline: none;
   }
+  &::placeholder {
+    color: $placeholder-grey;
+  }
 }
-.post-btn{
+.post-btn {
   width: 100%;
   background-color: $light-blue;
   color: $white;
   border-radius: 7px;
   padding: 10px;
-  &:disabled{
+  &:disabled {
     background-color: $btn-bg-disabled;
     color: $btn-disabled;
     cursor: unset;
   }
- 
-
 }
 
 .upload-btn {
@@ -107,7 +121,7 @@
     .post-image {
       img {
         width: 100%;
-        height: 100%;
+        height: 350px;
       }
     }
     .post-link {
@@ -140,8 +154,19 @@
       text-align: center;
       color: $black;
       font-weight: 500;
-      div {
+      &__button {
         padding: 5px 20px;
+        cursor: pointer;
+        &.show-reactions {
+          position: relative;
+          &:hover .container{
+           
+             
+                visibility: visible;
+              
+            
+          }
+        }
         &:hover {
           background-color: $bg-hover-grey;
         }
@@ -179,4 +204,10 @@
       margin: 10px 5px 0 0;
     }
   }
+}
+
+.back-arrow{
+  top:-45px;
+  right: -45px;
+  position: relative;
 }

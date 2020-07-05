@@ -1,5 +1,22 @@
-import React from "react";
+import React, { useState, Fragment } from "react";
 
-export default function CreatePostFooter({ onImageSelect, onTagsChange }) {
-  return <div>{/* implement the image/video & tags */}</div>;
+
+import { PictureOutlined, TagOutlined } from "@ant-design/icons";
+
+export default function CreatePostFooter({
+  btnText,
+  upload,
+  uploadPageHandler,
+  uploadPage,
+}) {
+
+  return (
+    <Fragment>
+      <button className="upload-btn" onClick={uploadPageHandler}>
+        {upload ? <PictureOutlined /> : <TagOutlined />}
+        <span>{btnText}</span>
+      </button>
+
+    </Fragment>
+  );
 }
